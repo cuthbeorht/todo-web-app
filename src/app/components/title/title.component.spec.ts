@@ -2,7 +2,7 @@ import {render, screen, fireEvent} from '@testing-library/angular';
 import {TitleComponent} from "./title.component";
 
 
-describe('Title Componenet', ()=> {
+describe('Title Component', ()=> {
   test('should render the supplied title', async() => {
     await render(TitleComponent, {
       componentProperties: {
