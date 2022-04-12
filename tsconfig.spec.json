@@ -4,7 +4,9 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
-      "jest"
+      "jest",
+      "node",
+      "@testing-library/jest-dom"
     ],
     "esModuleInterop": true,
   },
@@ -14,6 +16,7 @@
   ],
   "include": [
     "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/global.d.ts"
   ]
 }
