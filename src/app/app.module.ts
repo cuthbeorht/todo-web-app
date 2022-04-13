@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClient, HttpClientModule, HttpHandler} from "@angular/common/http";
 import { TitleComponent } from './components/title/title.component';
+import { TodoListComponent } from './components/todos/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitleComponent
+    TitleComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,

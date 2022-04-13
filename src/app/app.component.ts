@@ -9,21 +9,16 @@ import {Observable} from "rxjs";
 })
 export class AppComponent implements OnInit {
   title = 'todo-app';
-  todoItems: any[] = [];
 
-  constructor(private httpClient: HttpClient) {
+
+  constructor() {
   }
 
   ngOnInit() {
-    this.getTodoItems().subscribe((items) => {
-      this.todoItems = items.todos;
-    });
+
 
 
   }
 
-  getTodoItems(): Observable<any> {
-    console.log('Getting Todo items');
-    return this.httpClient.get('http://localhost:8000/todos');
-  }
+
 }
