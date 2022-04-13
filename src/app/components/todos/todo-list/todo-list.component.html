@@ -1,3 +1,5 @@
-<ul *ngFor="let item of todoItems">
-  <li >{{item.title}}</li>
-</ul>
+<div>
+  <ul *ngFor="let item of todoItems">
+    <li data-testid="foo">{{item.title}}</li>
+  </ul>
+</div>

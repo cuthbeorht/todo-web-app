@@ -1,4 +1,4 @@
-import {render, screen, fireEvent} from '@testing-library/angular';
+import {render, screen, fireEvent, waitFor} from '@testing-library/angular';
 import {TodoListComponent} from "./todo-list.component";
 import {HttpClient} from "@angular/common/http";
 import {of} from "rxjs";
@@ -17,7 +17,7 @@ describe('TodoList Component',  () => {
       ]
     }));
 
-    await render(TodoListComponent, {
+    const {container} = await render(TodoListComponent, {
       providers: [
         {
           provide: HttpClient,
@@ -26,7 +26,7 @@ describe('TodoList Component',  () => {
       ]
     });
 
-    expect(screen.getByText('title')).toBeVisible();
+    expect(screen.getByTestId('foo')).toBeVisible();
 
   });
 });
