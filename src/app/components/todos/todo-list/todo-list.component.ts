@@ -14,13 +14,12 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.getTodoItems().subscribe((items) => {
-      console.log(items);
+    this.fetchTodoItems().subscribe((items) => {
       this.todoItems = items.todos;
     });
   }
 
-  getTodoItems(): Observable<any> {
+  fetchTodoItems(): Observable<any> {
     return this.httpClient.get('http://localhost:8000/todos');
   }
 
