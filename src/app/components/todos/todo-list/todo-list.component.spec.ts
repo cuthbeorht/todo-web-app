@@ -22,10 +22,12 @@ describe('TodoList Component',  () => {
   it('should render the component', async() => {
 
     httpClientMock.get.mockReturnValueOnce(of({
-      todos: [{title: 'foo'}]
+      items: [
+        {title: 'title'}
+      ]
     }));
 
-    await render(TodoListComponent, {
+    const {container} = await render(TodoListComponent, {
       providers: [
         {
           provide: HttpClient,

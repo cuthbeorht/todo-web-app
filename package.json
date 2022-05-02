@@ -21,7 +21,10 @@
     "@testing-library/angular": "^11.0.4",
     "@testing-library/jest-dom": "^4.2.4",
     "rxjs": "~7.5.0",
+<<<<<<< HEAD
     "testing-library-selector": "^0.2.1",
+=======
+>>>>>>> b7c9b4bdf10ffb404171796c2718fa3a8319aebf
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
