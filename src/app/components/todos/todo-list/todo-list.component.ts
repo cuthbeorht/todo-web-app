@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {TodoApi} from "../common/apis/TodoApi";
 
 @Component({
   selector: 'app-todo-list',
@@ -10,17 +9,15 @@ import {HttpClient} from "@angular/common/http";
 export class TodoListComponent implements OnInit {
   todoItems: any[] = [];
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private todoApi: TodoApi) { }
 
   ngOnInit(): void {
 
-    this.fetchTodoItems().subscribe((items) => {
+    this.todoApi.fetchTodoItems().subscribe((items) => {
       this.todoItems = items.todos;
     });
   }
 
-  fetchTodoItems(): Observable<any> {
-    return this.httpClient.get('http://localhost:8000/todos');
-  }
+
 
 }
