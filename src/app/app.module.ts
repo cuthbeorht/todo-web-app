@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {HttpClient, HttpClientModule, HttpHandler} from "@angular/common/http";
 import { TitleComponent } from './components/title/title.component';
 import { TodoListComponent } from './components/todos/todo-list/todo-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TodoListComponent } from './components/todos/todo-list/todo-list.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
